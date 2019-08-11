@@ -1,0 +1,3 @@
+<!--pages/share/share.wxml-->
+<button open-type='share'>分享好友</button>
+<button open-type='share' bindgetuserinfo='sharezone'>分享朋友圈</button>

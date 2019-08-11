@@ -1,0 +1,7 @@
+<!--pages/mine/mine.wxml-->
+<view wx:if='{{!flag}}'>
+<button open-type='getUserInfo' bindgetuserinfo='getUserInfo'>login</button>
+</view>
+<view wx:else>
+<image src=''></image>
+</view>

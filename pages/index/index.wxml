@@ -1,0 +1,77 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- header部分 -->
+<swiper autoplay="true" interval="3000" circular="true" indicator-dots="true" indicator-active-color='#ff4891'>
+    <swiper-item>
+      <image src="https://j-image.missfresh.cn/img_20181008171641413.jpg?iopcmd=convert&dst=webp" />
+    </swiper-item>
+    <swiper-item>
+      <image src="https://j-image.missfresh.cn/img_20181023142740877.jpg?iopcmd=convert&dst=webp" />
+    </swiper-item>
+    <swiper-item>
+      <image src="https://j-image.missfresh.cn/img_20180823110926126.jpg?iopcmd=convert&dst=webp" />
+    </swiper-item>
+  </swiper>
+  <view class='header'>
+  
+    <view class="li">
+      <image src='../../utils/image/img_20181118234116965.png'></image>
+      <text>0元吃水果</text>
+    </view>
+    <view class="li">
+      <image src='../../utils/image/img_20181118234315430.png'></image>
+      <text>水果美容院</text>
+    </view>
+    <view class="li">
+      <image src='../../utils/image/img_20181118234340173.png'></image>
+      <text>加入会员</text>
+    </view>
+    <view class="li">
+      <image src='../../utils/image/img_20181118234537451.png'></image>
+      <text>本周上新</text>
+    </view>
+    <view class="li">
+      <image src='../../utils/image/img_20181118234837331.png'></image>
+      <text>每日签到</text>
+    </view>
+  </view>
+  <!-- 内容部分 -->
+  <view class='main'  wx:for="{{goodslist}}" wx:key="{{index}}">
+    <!-- 每一节内容 -->
+    <view class='section'>
+      <!-- 缩略图 -->
+      <view class='imgBox'>
+        <image src='{{HOSTNAME}}{{item.gthumb}}'></image>
+      </view>
+      <!-- 文本 -->
+      <view class='textBox'>
+        <view class='textUp'>
+          <text class='name'>{{item.gname}}</text>
+          <text class='des'>{{item.gdes}}</text>
+          <view class='tag'>
+            <text>新人专享</text>
+            <text>新人专享</text>
+            <text>新人专享</text>
+          </view>
+        </view>
+        <view class='textDown'>
+          <view class='money'>
+            <text class='discount'>¥{{item.gdiscount}}</text>
+            <text class='price'>¥{{item.gprice}}</text>
+          </view>
+          <view class='cart'>
+            <view class='car' wx:if="{{!item.numbers}}">
+              <image  src='../../utils/image/img_20170425134548759.png'  bindtap='insertGoods' data-index="{{index}}"></image>
+            </view>
+            <view class='count' wx:else>
+              <image src='../../utils/image/jian.png'></image>
+              <text>{{item.numbers}}</text>
+              <image src='../../utils/image/jia.png' bindtap='addGoods' data-gid="{{item.gid}}"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+</view>

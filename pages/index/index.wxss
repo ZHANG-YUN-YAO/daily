@@ -1,0 +1,145 @@
+/**index.wxss**/
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 24rpx;
+}
+/* header部分 */
+.header {
+  width: 100%;
+  height: 220rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.header > .li {
+  width: 20%;
+  height: 100%;
+  font-size:24rpx;
+  text-align: center;
+  padding: 10rpx;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: column;
+}
+.header > .li > image {
+  width: 100%;
+  height: 120rpx;
+}
+.header > .li > text {
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+/* 内容部分 */
+.main {
+  width: 100%;
+}
+/* 每一节内容 */
+.section {
+  width: 100%;
+  height: 220rpx;
+  padding: 24rpx 0;
+  display: flex;
+}
+/* 缩略图 */
+.section > .imgBox {
+  width: 220rpx;
+  height: 100%;
+}
+.section > .imgBox > image {
+  width: 100%;
+  height: 100%;
+}
+/* 文本 */
+.section > .textBox {
+  width: 450rpx;
+  height: 100%;
+  padding-left: 24rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: column;
+}
+.textBox > .textUp {
+  width: 100%;
+  height: 130rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: column;
+}
+.textBox > .textUp > .name {
+  width: 100%;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 30rpx;
+}
+.textBox > .textUp > .des {
+  width: 100%;
+  height: 30rpx;
+  line-height: 30rpx;
+  font-size: 26rpx;
+  color: #999;
+}
+.textBox > .textUp > .tag {
+  width: 100%;
+  height: 30rpx;
+  line-height: 30rpx;
+  font-size: 22rpx;
+}
+.textBox > .textUp > .tag > text {
+  color: #ff4891;
+  padding: 4rpx;
+  border: 1rpx solid #ff4891;
+  border-radius: 10rpx;
+  margin-right: 10rpx;
+}
+.textBox > .textDown {
+  width: 100%;
+  height: 80rpx;
+  font-size: 34rpx;
+  color: #ff4891;
+  display: flex;
+  justify-content: space-between;
+}
+.textBox > .textDown > .money {
+  width: 50%;
+  height: 100%;
+  padding-top: 30rpx;
+}
+.textBox > .textDown > .money > text:nth-child(2) {
+  color: #999;
+  font-size: 24rpx;
+  margin-left: 20rpx;
+  text-decoration:line-through;
+}
+.textBox > .textDown > .cart {
+  width: 50%;
+  height: 100%;
+}
+.textBox > .textDown > .cart > .car {
+  width: 80rpx;
+  height: 100%;
+  float: right;
+}
+.textBox > .textDown > .cart > .car > image {
+  width: 100%;
+  height: 100%;
+}
+.textBox > .textDown > .cart > .count {
+  width: 140rpx;
+  height: 100%;
+  padding-top: 30rpx;
+  float: right;
+  display: flex;
+  justify-content: space-between;
+}
+swiper{
+  width: 100%;
+}
+.textBox > .textDown > .cart > .count > image {
+  width: 40rpx;
+  height: 40rpx;
+}
+.textBox > .textDown > .cart > .count > text {
+  color: black;
+  font-size: 28rpx;
+}
